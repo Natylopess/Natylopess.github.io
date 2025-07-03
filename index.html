@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Natielly Portfólio</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e9f0f7;
+      color: #333;
+      display: flex;
+    }
+    nav{
+      width: 220px;
+      background-color: #1e2a38;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px;
+      position: fixed;
+      height: 100%;
+    }
+    nav h2{
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+    nav a{
+      color: #a8bcd9;
+      text-decoration: none;
+      margin: 12px 0;
+      font-size: 1.1rem;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover, nav a.active{
+      background-color: #3b5998;
+      color: #fff;
+    }
+    main{
+      margin-left: 220px;
+      padding: 40px;
+      flex-grow: 1;
+    }
+    h1{
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      color: #1e2a38;
+    }
+    p{
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      max-width: 700px;
+    }
+    .skills{
+      margin-top: 30px;
+    }
+    .skills ul{
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 700px;
+    }
+    .skills li{
+      background-color: #3b5998;
+      color: #fff;
+      margin: 6px 10px 6px 0;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .foto-perfil{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #5472d3;
+        object-fit: cover;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>Natielly</h2>
+    <a href="index.html" class="active">Sobre</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <main>
+    <img src="https://i.imgur.com/c5STeo5.jpeg" alt="Foto de Natielly" class="foto-perfil">
+    <h1>Olá, eu sou Natielly</h1>
+    <p>Tenho 17 anos e estou nos dias finais do curso técnico em Tecnologia da Informação pelo SENAI, onde adquiri conhecimentos importantes sobre redes, hardware e suporte técnico.</p>
+    <p>Tenho grande interesse por tecnologia e busco sempre aprender coisas novas para crescer profissionalmente e contribuir com soluções práticas no mundo da TI.</p>
+    <p>Meu foco está em desenvolver habilidades que me preparem para o mercado de trabalho e para os desafios da área tecnológica.</p>
+    <section class="skills">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Lógica de Programação</li>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>Banco de dados</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

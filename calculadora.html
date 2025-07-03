@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora</title>
+  <style>
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #516faf, #ffffff);
+      padding: 30px;
+      text-align: center;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+    h1{
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #3b5998;
+    }
+    input[type="text"]{
+      padding: 10px 12px;
+      margin: 0 10px 20px 0;
+      border: 2px solid #3b5998;
+      border-radius: 8px;
+      width: 130px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus{
+      border-color: #3b5998;
+      outline: none;
+    }
+    button{
+      padding: 12px 25px;
+      background-color: #3b5998;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover{
+      background-color: #3b5998;
+    }
+    #resultado{
+      display: none;
+      margin-top: 25px;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #222;
+      min-height: 90px;
+      white-space: pre-line;
+      word-wrap: break-word;
+      max-width: 350px;
+      text-align: left;
+      border: 2px solid #3b5998;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #e3e8ff;
+    }
+    a{
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calculadora</h1>
+  Valor 01:<input type="text" id="valor1" />
+  Valor 02:<input type="text" id="valor2" />
+  <button onclick="calcular()">Calcular</button>
+  <h1 id="resultado"></h1>
+  <script>
+    function calcular() {
+      var valor1 = parseInt(document.getElementById("valor1").value);
+      var valor2 = parseInt(document.getElementById("valor2").value);
+      var resultadoEl = document.getElementById("resultado");
+      if (isNaN(valor1) && isNaN(valor2)) {
+        alert("Você não informou nenhum valor");
+        resultadoEl.style.display = "none";
+      } else if (isNaN(valor1)) {
+        alert("Você não informou o valor 1");
+        resultadoEl.style.display = "none";
+      } else if (isNaN(valor2)) {
+        alert("Você não informou o valor 2");
+        resultadoEl.style.display = "none";
+      } else {
+        var soma = valor1 + valor2;
+        var subtracao = valor1 - valor2;
+        var multiplicacao = valor1 * valor2;
+        var divisao = valor1 / valor2;
+        resultadoEl.textContent =
+          `Soma = ${soma}
+            Subtração = ${subtracao}
+            Multiplicação = ${multiplicacao}
+            Divisão = ${divisao.toFixed(2)}`;
+        resultadoEl.style.display = "block";
+      }
+    }
+  </script>
+    <br><br><a href="projetos.html">Voltar aos projetos</a>
+</body>
+</html>
